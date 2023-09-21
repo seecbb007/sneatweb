@@ -1,0 +1,21 @@
+.visitorContainer {
+  width: 50%;
+}
+
+.visitorTitle {
+  display: flex;
+  justify-content: space-between;
+}
+
+.v_subTitle {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: rgba(50, 71, 92, 0.6);
+}
+.visitorInfo {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+  height: 12.5rem;
+}

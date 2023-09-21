@@ -1,0 +1,14 @@
+.orderStatisticCard {
+  display: grid;
+  grid-template-rows: 1fr, 0.5fr, 2fr, 4fr;
+  padding: 2rem;
+}
+.orderS_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+.orderS_subtitle {
+  color: grey;
+}

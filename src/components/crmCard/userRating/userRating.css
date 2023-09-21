@@ -1,0 +1,28 @@
+.orderStatisticCard {
+  display: grid;
+  grid-template-rows: 1fr, 0.5fr, 2fr, 4fr;
+  padding: 2rem;
+}
+.orderS_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+.ratingContent {
+  display: flex;
+  align-items: center;
+}
+.ratingContent_number {
+  font-size: 2.9991rem;
+  line-height: 1.167;
+  color: rgba(50, 71, 92, 0.87);
+  margin-right: 1.5rem;
+}
+.ratingPoint {
+  background-color: #e7e7ff;
+  padding: 0.2rem 0.9rem;
+  border-radius: 5px;
+  color: rgb(105, 108, 255);
+  margin-right: 1.5rem;
+}

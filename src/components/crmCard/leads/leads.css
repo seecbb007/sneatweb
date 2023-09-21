@@ -1,0 +1,38 @@
+.leadsContainer {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+.leads_title {
+  line-height: 1.6;
+  color: rgba(50, 71, 92, 0.87);
+  font-size: 1.25rem;
+  /* width: 10rem; */
+}
+
+.leads_subTitle {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: rgba(50, 71, 92, 0.6);
+}
+
+.leads_amount {
+  font-weight: 500;
+  font-size: 1.4993rem;
+  line-height: 1.334;
+  color: rgba(50, 71, 92, 0.87);
+}
+.leads_detailgraph {
+  position: relative;
+  /* width: 20rem; */
+}
+.leads_detailInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* background-color: red; */
+}

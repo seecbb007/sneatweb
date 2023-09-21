@@ -1,0 +1,58 @@
+.space {
+  margin: 2rem 0;
+}
+.growthrateContainer {
+  position: absolute;
+  bottom: 11rem;
+  left: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: antiquewhite; */
+}
+.growthrate {
+  color: rgba(50, 71, 92, 0.87);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.growth {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.growth_Container_Content {
+  position: absolute;
+  /* background-color: antiquewhite; */
+  height: 25%;
+  width: 100%;
+  top: 240px;
+  text-align: center;
+}
+.growth_content {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(50, 71, 92, 0.6);
+  font-weight: 600;
+}
+.yearrevenue_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.eachyear_box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(50, 71, 92, 0.6);
+}
+.icon_square {
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

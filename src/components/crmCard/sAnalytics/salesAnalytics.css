@@ -1,0 +1,16 @@
+.sAnalytics {
+  padding: 1rem 1.5rem;
+}
+
+.sAnalytics_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.salesPercentage {
+  padding: 0.3rem 0.6rem;
+  background-color: #e8fadf;
+  color: #7ee049;
+  border-radius: 5px;
+  margin-right: 1rem;
+}

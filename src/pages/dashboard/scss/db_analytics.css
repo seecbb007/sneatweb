@@ -1,0 +1,26 @@
+.componenent {
+  margin-left: 10rem;
+}
+
+.component_css {
+  flex-grow: 1;
+  min-width: 0px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.componentContainer {
+  margin: 0 auto;
+  /* border: 1px solid blue; */
+  position: relative;
+  max-width: calc(1440px - 3rem);
+  min-width: 720px;
+  width: 80vw;
+}
+
+.analytics {
+  /* border: 1px solid salmon; */
+  margin-top: 2rem;
+}

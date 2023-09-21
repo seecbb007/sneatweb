@@ -1,0 +1,29 @@
+.analytics_overview {
+  padding: 0.5rem 1.5rem;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(50, 71, 92, 0.6);
+}
+
+.ov_user {
+  font-size: 2rem;
+  color: #696cff;
+}
+
+.overview_userinfo {
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  width: 25rem;
+}
+
+.overview_userinfo .ov_content {
+  margin-top: 0.8rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}

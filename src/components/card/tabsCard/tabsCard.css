@@ -1,0 +1,19 @@
+.tabPanelContainer {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: space-betwee; */
+}
+.tabPanelContainer_content {
+  display: flex;
+}
+
+.content_info {
+  padding-left: 30px;
+  color: #b6bdc5;
+}
+.tabPanelContainer_details {
+  display: flex;
+  align-items: center;
+  position: relative;
+}

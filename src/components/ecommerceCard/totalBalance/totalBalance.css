@@ -1,0 +1,23 @@
+.balanceContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.balanceBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.balanceSummary {
+  border-top: 1px solid #f5f5f5;
+  padding-top: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.b_summary {
+  color: rgba(50, 71, 92, 0.6);
+  font-size: 0.875rem;
+}

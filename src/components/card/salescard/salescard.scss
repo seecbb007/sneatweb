@@ -1,0 +1,32 @@
+.salesCard {
+  height: 10.5rem;
+  padding: 1rem;
+}
+
+.salescard_wallet {
+  display: flex;
+  justify-content: space-between;
+}
+.salescard_title {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(50, 71, 92, 0.6);
+  font-weight: 600;
+  margin: 0.5rem 0px 0.125rem;
+}
+
+.salescard_amount {
+  font-size: 1.4993rem;
+}
+.salescard_percentageContainer {
+  margin-top: 0.5rem;
+  display: flex;
+
+  align-items: center;
+}
+.salescard_percentage {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  // color: rgb(113, 221, 55);
+  font-weight: 500;
+}

@@ -1,0 +1,35 @@
+.profitReportCard {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  padding: 1rem;
+  align-items: center;
+}
+.profitReport_Content {
+  color: rgba(50, 71, 92, 0.87);
+}
+.profitReport_title {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.profitReport_yearbar {
+  color: rgb(255, 171, 0);
+  background-color: #fff1d6;
+  padding: 0.3rem;
+  width: 7rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  margin: 0.5rem 0;
+}
+.pR_percentage {
+  color: rgb(113, 221, 55);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 7rem;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+.pR_amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
