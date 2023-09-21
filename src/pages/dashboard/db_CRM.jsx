@@ -33,7 +33,7 @@ export default function DashboardAnalytics() {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/v1/dashboards/crm")
+      .get("https://sneatwebserver.onrender.com/api/v1/dashboards/crm")
       .then((res) => {
         dispatch(setCrmData(res.data));
       })

@@ -33,7 +33,7 @@ export default function DashboardEcommerce() {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/v1/dashboards/ecommerce")
+      .get("https://sneatwebserver.onrender.com/api/v1/dashboards/ecommerce")
       .then((res) => {
         dispatch(setEcommerceData(res.data));
       })

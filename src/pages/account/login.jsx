@@ -53,7 +53,7 @@ export default function Login() {
     e.preventDefault();
     //后端接user数据，后端返回响应
     axios
-      .post("http://127.0.0.1:8000/api/v1/login", user)
+      .post("https://sneatwebserver.onrender.com/api/v1/login", user)
       .then((res) => {
         if (res.data.code === 0) {
           setCurrentCodeMessage({
