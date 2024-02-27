@@ -21,10 +21,10 @@ export default function Routerview() {
 
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/login"></Navigate>}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/register" element={<Register />}></Route>
       <Route path="/forgot-password" element={<FortgotPassword />}></Route>
-      <Route path="/" element={<Navigate to="/login"></Navigate>}></Route>
       <Route path="/dashboards">
         <Route
           path="analytics"

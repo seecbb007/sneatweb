@@ -48,12 +48,12 @@ export default function Register() {
     if (validation(user) !== true && validation(user) !== []) {
     } else {
       axios
-        .post("http://127.0.0.1:8000/api/v1/register", user)
+        .post("https://sneatwebserver.onrender.com/api/v1/register", user)
         .then((res) => {
           let loginUser = { email: user.email, password: user.password };
 
           axios
-            .post("http://127.0.0.1:8000/api/v1/login", loginUser)
+            .post("https://sneatwebserver.onrender.com/api/v1/login", loginUser)
             .then((res) => {})
             .catch((error) => {
               console.log("Account created, could not logined in", error);

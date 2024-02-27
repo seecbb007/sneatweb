@@ -61,7 +61,7 @@ export default function TimelineCard() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/v1/dashboards/analytics")
+      .get("https://sneatwebserver.onrender.com/api/v1/dashboards/analytics")
       .then((res) => {
         dispatch(setAnalysisData(res.data));
       })
