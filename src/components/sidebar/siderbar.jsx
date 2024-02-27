@@ -461,7 +461,7 @@ export default function Siderbar() {
                 <></>
               )}
             </ListSubheader>
-            {renderButtons(SIDEBAR_BUTTON_LIST_APP)}
+            {/* {renderButtons(SIDEBAR_BUTTON_LIST_APP)} */}
             <ListSubheader
               sx={{
                 display: "flex",
@@ -491,7 +491,7 @@ export default function Siderbar() {
                 <></>
               )}
             </ListSubheader>
-            {renderButtons(SIDEBAR_BUTTON_LIST_USER)}
+            {/* {renderButtons(SIDEBAR_BUTTON_LIST_USER)} */}
             <ListSubheader
               sx={{
                 display: "flex",
@@ -521,7 +521,7 @@ export default function Siderbar() {
                 <></>
               )}
             </ListSubheader>
-            {renderButtons(SIDEBAR_BUTTON_LIST_FORMS)}
+            {/* {renderButtons(SIDEBAR_BUTTON_LIST_FORMS)} */}
             <ListSubheader
               sx={{
                 display: "flex",
@@ -551,7 +551,7 @@ export default function Siderbar() {
                 <></>
               )}
             </ListSubheader>
-            {renderButtons(SIDEBAR_BUTTON_LIST_CHARTS)}
+            {/* {renderButtons(SIDEBAR_BUTTON_LIST_CHARTS)} */}
           </Drawer>
         </div>
       </Box>

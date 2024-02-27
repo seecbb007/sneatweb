@@ -35,7 +35,10 @@ import Button from "@mui/joy/Button";
 import Divider from "@mui/joy/Divider";
 
 export default function Login() {
-  const [user, setUser] = useState({ email: "", password: "" });
+  const [user, setUser] = useState({
+    email: "admin@sneat.com",
+    password: "Adminadmin",
+  });
   const [currentCodeMessage, setCurrentCodeMessage] = useState({
     code: "",
     message: "",
@@ -48,7 +51,7 @@ export default function Login() {
   };
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  console.log("user", user);
   const submit = (e) => {
     e.preventDefault();
     //后端接user数据，后端返回响应
@@ -72,6 +75,8 @@ export default function Login() {
       .catch((error) => {
         console.log("app:failure error", error);
       });
+    // navigate("/dashboards/analytics");
+    // dispatch(setLoginData(true));
   };
 
   //mui grid  2
@@ -87,9 +92,18 @@ export default function Login() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   //mui input adornment
-  const [showPassword, setShowPassword] = React.useState(false);
+  // const [showPassword, setShowPassword] = React.useState(false);
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  // const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  // const handleMouseDownPassword = (event) => {
+  //   event.preventDefault();
+  // };
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
@@ -181,7 +195,7 @@ export default function Login() {
 
                 <Box sx={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
                   <form onSubmit={(e) => submit(e)} action="" method="post">
-                    {currentCodeMessage.code === 0 ? (
+                    {/* {currentCodeMessage.code === 0 ? (
                       <TextField
                         error
                         label="Email"
@@ -194,7 +208,7 @@ export default function Login() {
                             // ),
                           }
                         }
-                        defaultValue="admin@sneat.com"
+                        defaultValue={userLoginInfo.email}
                         fullWidth
                         name="email"
                         onChange={(e) => handleChange(e)}
@@ -212,13 +226,36 @@ export default function Login() {
                             // ),
                           }
                         }
-                        defaultValue="admin@sneat.com"
+                        defaultValue={userLoginInfo.email}
                         fullWidth
                         name="email"
                         onChange={(e) => handleChange(e)}
+                        helperText={
+                          currentCodeMessage.code === 0
+                            ? "Email or Password is invalid."
+                            : ""
+                        }
                       />
-                    )}
-                    {user.password.length < 5 && user.password !== "" ? (
+                    )} */}
+
+                    <TextField
+                      label="Email"
+                      id="outlined-start-adornment"
+                      sx={{ m: 1 }}
+                      InputProps={{}}
+                      value={user.email}
+                      fullWidth
+                      name="email"
+                      onChange={(e) => handleChange(e)}
+                      error={currentCodeMessage.code === 0}
+                      helperText={
+                        currentCodeMessage.code === 0
+                          ? "Email or Password is invalid."
+                          : ""
+                      }
+                    />
+
+                    {/* {user.password.length < 5 && user.password !== "" ? (
                       <FormControl sx={{ m: 1 }} variant="outlined" fullWidth>
                         <InputLabel htmlFor="standard-adornment-password" error>
                           Password
@@ -229,7 +266,7 @@ export default function Login() {
                           onChange={(e) => handleChange(e)}
                           id="outlined-adornment-password"
                           type={showPassword ? "text" : "password"}
-                          defaultValue="admin"
+                          value={user.password}
                           endAdornment={
                             <InputAdornment position="end">
                               <IconButton
@@ -270,7 +307,7 @@ export default function Login() {
                           onChange={(e) => handleChange(e)}
                           id="outlined-adornment-password"
                           type={showPassword ? "text" : "password"}
-                          defaultValue="admin"
+                          value={user.password}
                           endAdornment={
                             <InputAdornment position="end">
                               <IconButton
@@ -290,8 +327,84 @@ export default function Login() {
                           label="Password"
                         />
                       </FormControl>
-                    )}
-
+                    )} */}
+                    <FormControl sx={{ m: 1 }} variant="outlined" fullWidth>
+                      {/* <InputLabel htmlFor="standard-adornment-password" error>
+                        Password
+                      </InputLabel> */}
+                      {/* <TextField
+                        error={currentCodeMessage.code === 0}
+                        label="PPassword"
+                        name="password"
+                        onChange={(e) => handleChange(e)}
+                        id="outlined-adornment-password"
+                        type={showPassword ? "text" : "password"}
+                        value={user.password}
+                        endAdornment={
+                          <InputAdornment position="end">
+                            <IconButton
+                              aria-label="toggle password visibility"
+                              onClick={handleClickShowPassword}
+                              onMouseDown={handleMouseDownPassword}
+                              edge="end"
+                            >
+                              {showPassword ? (
+                                <VisibilityOff />
+                              ) : (
+                                <Visibility />
+                              )}
+                            </IconButton>
+                          </InputAdornment>
+                        }
+                        helperText={
+                          currentCodeMessage.code === 0
+                            ? "Password must be at least 5 characterss!!"
+                            : ""
+                        }
+                      /> */}
+                      <TextField
+                        error={user.password.length < 5}
+                        label="Password"
+                        name="password"
+                        onChange={(e) => handleChange(e)}
+                        id="outlined-adornment-password"
+                        type={showPassword ? "text" : "password"}
+                        value={user.password}
+                        InputProps={{
+                          // Changed to InputProps for consistency
+                          endAdornment: (
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge="end"
+                              >
+                                {showPassword ? (
+                                  <VisibilityOff />
+                                ) : (
+                                  <Visibility />
+                                )}
+                              </IconButton>
+                            </InputAdornment>
+                          ),
+                        }}
+                        helperText={
+                          user.password.length < 5
+                            ? "Password must be at least 5 characters!" // Corrected typo here
+                            : ""
+                        }
+                      />
+                      {/* <Typography
+                        sx={{
+                          fontSize: "0.8rem",
+                          marginLeft: "0.9rem",
+                          color: "#D32F2F",
+                        }}
+                      >
+                        Password must be at least 5 characters!!
+                      </Typography> */}
+                    </FormControl>
                     <Box
                       sx={{
                         display: "flex",
