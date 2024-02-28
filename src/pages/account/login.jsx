@@ -55,28 +55,28 @@ export default function Login() {
   const submit = (e) => {
     e.preventDefault();
     //后端接user数据，后端返回响应
-    axios
-      .post("https://sneatwebserver.onrender.com/api/v1/login", user)
-      .then((res) => {
-        if (res.data.code === 0) {
-          setCurrentCodeMessage({
-            code: res.data.code,
-            message: "Email or Password is invalid",
-          });
-        } else {
-          setCurrentCodeMessage({
-            code: res.data.code,
-            message: "Login Successful",
-          });
-          navigate("/dashboards/analytics");
-          dispatch(setLoginData(true));
-        }
-      })
-      .catch((error) => {
-        console.log("app:failure error", error);
-      });
-    // navigate("/dashboards/analytics");
-    // dispatch(setLoginData(true));
+    // axios
+    //   .post("https://sneatwebserver.onrender.com/api/v1/login", user)
+    //   .then((res) => {
+    //     if (res.data.code === 0) {
+    //       setCurrentCodeMessage({
+    //         code: res.data.code,
+    //         message: "Email or Password is invalid",
+    //       });
+    //     } else {
+    //       setCurrentCodeMessage({
+    //         code: res.data.code,
+    //         message: "Login Successful",
+    //       });
+    //       navigate("/dashboards/analytics");
+    //       dispatch(setLoginData(true));
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log("app:failure error", error);
+    //   });
+    navigate("/dashboards/analytics");
+    dispatch(setLoginData(true));
   };
 
   //mui grid  2
