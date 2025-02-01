@@ -65,7 +65,7 @@ export const popup_searchButtons = {
     },
     { btnName: "CRM", icon: <TrackChangesOutlinedIcon /> },
     { btnName: "eCommerce", icon: <ShoppingCartOutlinedIcon /> },
-    { btnName: "User List", icon: <PeopleOutlineIcon /> },
+    
   ],
   appPages: [
     { btnName: "Calendar", icon: <CalendarTodayIcon /> },
@@ -91,8 +91,7 @@ export const languages = [
   {
     lan: "English",
   },
-  { lan: "Chinese" },
-  { lan: "French" },
+  { lan: "Coming" },
 ];
 
 export const iconshortcuts = [

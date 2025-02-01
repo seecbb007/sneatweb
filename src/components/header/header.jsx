@@ -57,6 +57,7 @@ export default function Header() {
   const [dropdownShortcutsOn, setDropdownShortcutsOn] = useState(false);
   const [dropdownNotification, setDropdownNotification] = useState(false);
   const [dropDownAvatar, setDropDownAvatar] = useState(false);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const StyledBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
@@ -139,6 +140,12 @@ export default function Header() {
     setMessages(refreshMessages());
   }, [value, setMessages]);
 
+  const routeMap = {
+    Analytics: "/dashboards/analytics",
+    CRM: "/dashboards/crm",
+    eCommerce: "/dashboards/ecommerce",
+  }
+
   return (
     <div>
       <div className="navBar">
@@ -188,7 +195,7 @@ export default function Header() {
                     zIndex: (theme) => theme.zIndex.drawer + 5,
                   }}
                   open={open}
-                  // onClick={handleClose}
+                  
                 >
                   <div className="popup_searchContainer">
                     <div className="popup_searchbar">
@@ -226,10 +233,12 @@ export default function Header() {
                       </Button>
                     </div>
                     <div className="popup_listItem_Container">
+                    <div>Apps & Pages, User Interface, Forms & Tables Features are coming soon.</div>
                       <div className="popup_listItem_grid">
+                        
                         <div className="popup_listItem_buttonslist">
                           <div className="popup_listItem_Title">
-                            POPULR SEARCHES
+                            POPULAR SEARCHES
                           </div>
                           {popup_searchButtons.popularSearches?.map(
                             (eachitem, index) => {
@@ -244,6 +253,7 @@ export default function Header() {
                                       paddingLeft: 0,
                                       marginTop: "3px",
                                     }}
+                                    onClick={() => navigate(routeMap[eachitem.btnName])}
                                   >
                                     {eachitem.icon}
                                     <span className="popup_listItem_btnname">
@@ -255,6 +265,7 @@ export default function Header() {
                             }
                           )}
                         </div>
+                        
                         <div className="popup_listItem_buttonslist">
                           <div className="popup_listItem_Title">
                             APPS & PAGES
