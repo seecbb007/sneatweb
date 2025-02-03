@@ -36,8 +36,8 @@ import Divider from "@mui/joy/Divider";
 
 export default function Login() {
   const [user, setUser] = useState({
-    email: "",
-    password: "",
+    email: "admin@sneat.com",
+    password: "Adminadmin",
   });
   const [currentCodeMessage, setCurrentCodeMessage] = useState({
     code: "",
